@@ -12,17 +12,18 @@ public class PlayerMotion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
-    void Update() 
+    void Update()
     {
-        
+        #region PlayerControl
         transform.Translate(Vector2.up * Time.deltaTime * speed);
-        if (Input.GetKey("left")) {
+        if (Input.GetKey("left"))
+        {
             transform.Translate(Vector2.left * Time.deltaTime * horizontalSpeed);
-           
+
         }
         if (Input.GetKey("right"))
         {
@@ -30,13 +31,19 @@ public class PlayerMotion : MonoBehaviour
         }
         if (Input.GetKey("up"))
         {
-            background[0].transform.Translate(Vector2.down * Time.deltaTime * 5f);
-            background[1].transform.Translate(Vector2.down * Time.deltaTime * 5f);
+            transform.Translate(Vector2.up * Time.deltaTime * (speed + 10f));
+            //background[0].transform.Translate(Vector2.down * Time.deltaTime * 5f);
+            //background[1].transform.Translate(Vector2.down * Time.deltaTime * 5f);
+        }
+        if (Input.GetKey("down"))
+        {
+            transform.Translate(Vector2.down * Time.deltaTime * (speed + 20f));
         }
         if (transform.position.y >= 238.6)
         {
             print("Move Ship");
             transform.position = new Vector3(-3.7f, 0f, -1);
         }
+        #endregion
     }
 }
