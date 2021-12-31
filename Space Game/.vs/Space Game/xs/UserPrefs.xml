@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMotion.cs">
     <Files>
       <File FileName="Assets/Scripts/PlayerMotion.cs" Line="21" Column="21" />
-      <File FileName="Assets/Scripts/CameraMotion.cs" Line="19" Column="1" />
+      <File FileName="Assets/Scripts/CameraMotion.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
